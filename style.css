@@ -1,0 +1,91 @@
+:root {
+    --background: #000000;
+    --gray-800: #424242;
+    --green-500: #9e0303;
+}
+
+* {
+  border: 0;
+  box-sizing: content-box;
+  font-family: 'Mouse Memoirs', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    align-items: center;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    width: 100%;
+
+}
+
+img {
+    max-width: 200px;
+    width: auto;
+}
+
+h1 {
+    color: white;
+    padding: 20px;
+}
+
+#contador {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+#contador li {
+    background-color: var(--gray-800);
+    border-radius: 15px;
+    color: var(--green-500);
+    font-size: 42px;
+    font-weight: bold;
+    height: 60px;
+    padding: 8px 12px;
+    position: relative;
+    text-align: center;
+    width: 50px;
+}
+
+#contador li:before,
+#contador li:after {
+    position: absolute;
+    color: white;
+}
+
+#contador li:not(:last-child):before {
+    content: ":";
+    font-size: 24px;
+    right: -15px;
+    top: 15px;
+}
+
+#contador li:after {
+    bottom: -30px;
+    display: flex;
+    font-weight: 100;
+    justify-content: center;
+    width: calc(100% - 22px);
+    font-size: 20px;
+}
+
+#contador li.dias:after {
+    content: "dias";
+}
+
+#contador li.horas:after {
+    content: "horas";
+}
+
+#contador li.minutos:after {
+    content: "minutos";
+}
+
+#contador li.segundos:after {
+    content: "segundos";
+}
